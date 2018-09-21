@@ -3,7 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>sqlite</groupId>
     <artifactId>sqlite-boot</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -19,12 +18,10 @@
             </plugin>
         </plugins>
     </build>
-
     <properties>
-        <ormlite-version>5.0</ormlite-version>
+        <ormlite-version>4.48</ormlite-version>
         <sqlite-jdbc.version>3.23.1</sqlite-jdbc.version>
     </properties>
-
     <dependencies>
         <!--SQLITE-->
         <dependency>

@@ -15,56 +15,81 @@
     <table id="7" parent="2" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <table id="8" parent="2" name="users"/>
-    <column id="9" parent="6" name="type">
+    <table id="8" parent="2" name="todo"/>
+    <table id="9" parent="2" name="users"/>
+    <column id="10" parent="6" name="type">
       <DataType>text|0</DataType>
     </column>
-    <column id="10" parent="6" name="name">
+    <column id="11" parent="6" name="name">
       <Position>1</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="11" parent="6" name="tbl_name">
+    <column id="12" parent="6" name="tbl_name">
       <Position>2</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="12" parent="6" name="rootpage">
+    <column id="13" parent="6" name="rootpage">
       <Position>3</Position>
       <DataType>integer|0</DataType>
     </column>
-    <column id="13" parent="6" name="sql">
+    <column id="14" parent="6" name="sql">
       <Position>4</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="14" parent="7" name="name"/>
-    <column id="15" parent="7" name="seq">
+    <column id="15" parent="7" name="name"/>
+    <column id="16" parent="7" name="seq">
       <Position>1</Position>
     </column>
-    <column id="16" parent="8" name="id">
+    <column id="17" parent="8" name="id">
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="17" parent="8" name="name">
+    <column id="18" parent="8" name="name">
       <Position>1</Position>
       <DataType>TEXT|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="18" parent="8" name="email">
+    <column id="19" parent="8" name="deadline">
       <Position>2</Position>
-      <DataType>TEXT|0</DataType>
-      <NotNull>1</NotNull>
+      <DataType>DATE|0</DataType>
     </column>
-    <index id="19" parent="8" name="id_id_uindex">
+    <index id="20" parent="8" name="todo_id_uindex">
       <ColNames>id</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <index id="20" parent="8" name="id_email_uindex">
+    <key id="21" parent="8">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>todo_id_uindex</UnderlyingIndexName>
+    </key>
+    <column id="22" parent="9" name="id">
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="23" parent="9" name="name">
+      <Position>1</Position>
+      <DataType>TEXT|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="9" name="email">
+      <Position>2</Position>
+      <DataType>TEXT|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="25" parent="9" name="id_id_uindex">
+      <ColNames>id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="26" parent="9" name="id_email_uindex">
       <ColNames>email</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="21" parent="8">
+    <key id="27" parent="9">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>id_id_uindex</UnderlyingIndexName>
